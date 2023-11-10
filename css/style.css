@@ -27,7 +27,7 @@ button{
 button:active{
     box-shadow: 1px 1px 5px white,-1px -1px 5px rgba(5, 4, 4, 0.653) ;
 }
-.dis{
+#display{
     width: 300px;
     height: 9vh;
     border-radius: 20px;
