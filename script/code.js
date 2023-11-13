@@ -1,16 +1,24 @@
-let display = document.getElementById('display')
+document.addEventListener('DOMContentLoaded', function () {
+    let display = document.getElementById('display');
+    let buttons = document.querySelectorAll('.number, .operator');
+    let calculateButton = document.querySelector('.calculate');
+    let clearButton = document.querySelector('.clear');
 
-function appendToDisplay(value){
-    display.value += value
-}
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        display.textContent += button.textContent;
+      });
+    });
 
-function clearDisplay(){
-    display.value =''
-}
-function calculate(){
-    try{
-        display.value = eval(display.value)
-    } catch(error){
-        display.value ='error'
-    }
-}
+    calculateButton.addEventListener('click', function () {
+      try {
+        display.textContent = eval(display.textContent);
+      } catch (error) {
+        display.textContent = 'Error';
+      }
+    });
+
+    clearButton.addEventListener('click', function () {
+      display.textContent = '';
+    });
+  });
