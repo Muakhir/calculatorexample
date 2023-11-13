@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let buttons = document.querySelectorAll('.number, .operator');
     let calculateButton = document.querySelector('.calculate');
     let clearButton = document.querySelector('.clear');
+    let dotButton = document.querySelector('.dot');
 
     buttons.forEach(function (button) {
       button.addEventListener('click', function () {
